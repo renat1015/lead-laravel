@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamp('date')->useCurrent();
 
             $table->unique(['product_id', 'country_id', 'email']);
-            $table->index(['date', 'country_id', 'product_id']);
+            $table->index(['date DESC', 'country_id', 'product_id']);
         });
     }
 
